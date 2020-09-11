@@ -64,6 +64,7 @@ public class InitDb {
 
             Delivery delivery =new Delivery();
             delivery.setAddress(member.getAddress());
+            em.persist(delivery);
             Order order = Order.createOrder(member, delivery, orderItem1, orderItem2);
             em.persist(order);
         }
@@ -92,6 +93,7 @@ public class InitDb {
 
             Delivery delivery =new Delivery();
             delivery.setAddress(member.getAddress());
+            em.persist(delivery);
             Order order = Order.createOrder(member, delivery, orderItem1, orderItem2);
             em.persist(order);
         }
