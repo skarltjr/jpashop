@@ -90,7 +90,8 @@ public class InitDb {
 
             OrderItem orderItem1 = OrderItem.createOrderItem(book1, 20000, 3);
             OrderItem orderItem2 = OrderItem.createOrderItem(book2, 40000, 4);
-
+            em.persist(orderItem1);
+            em.persist(orderItem2);
             Delivery delivery =new Delivery();
             delivery.setAddress(member.getAddress());
             em.persist(delivery);
